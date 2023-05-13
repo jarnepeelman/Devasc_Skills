@@ -94,11 +94,59 @@
     </ul>  
     
 <h1>LAB 2 - Explore rest apis with API-simulator and postmans</h1>
-    <h2>TASK 1.1: </h2>
-      <h3>Task preparation en implementatie:</h3>
-    
-    
-    
+<h2>PART 1: Explore API Documentation Using the API Simulator</h2>
+  <h3>Task preparation en implementatie:</h3> 
+<ul>
+  <li>DEVASC-machine installeren</li>
+  <li>Zorg ervoor dat het curl-commando werkt</li>
+  <li>Zorg voor de juiste URL's om de API-oproep te maken</li>
+</ul>
+<h3>Foutopsporingstaak:</h3>
+<ul>
+  <li>Lees de responscode</li>
+  <li>Welke foutcode komt er? Is dit een statuscode? 404, 403 of is er iets mis met het dataveld?</li>
+  <li>Tegengekomen fout 401 - Verkeerde invoer meegegeven aan de API-oproep</li>
+</ul>
+<h3>Verificatietaak:</h3>
+<ul>
+  <li>Controleer succesvolle API-oproepen met statuscodes 200</li>
+  <li>Zorg ervoor dat de juiste items in de respons worden geretourneerd</li>
+  <li>Maak oproepen met extra parameters en controleer of de parameters die in de URL zijn opgegeven, effectief het veld teruggeven</li>
+  <li>Maak POST-oproepen en controleer of de items zijn toegevoegd</li>
+  <li>Maak DELETE-oproepen en controleer of items daadwerkelijk worden verwijderd</li>
+</ul>
+<h2>PART 2: Gebruik Postman om API-oproepen naar de API-simulator te maken</h2>
+  <h3>Task preparation en implementatie:</h3> 
+  <ul>
+    <li>Installeer de juiste versie van Postman</li>
+    <li>Voeg de API-token toe aan het autorisatietabblad van de Postman-API om toegang te krijgen tot de oproepen</li>
+  </ul>
+  <h3>Foutopsporingstaak:</h3>
+  <ul>
+    <li>Identificeer fouten met statuscodes en reactieberichten</li>
+  </ul>
+  <h3>Verificatietaak:</h3>
+  <ul>
+    <li>Controleer succesvolle API-oproepen met statuscodes 200</li>
+    <li>Zorg ervoor dat de juiste items in de respons worden geretourneerd</li>
+  </ul>
+  <h2>Deel 3: Gebruik Python om 100 boeken aan de API-simulator toe te voegen</h2>
+  <h3>Voorbereiding en uitvoering van de taak:</h3> 
+  <ul>
+    <li>Verkrijg de API-toegangstoken en voeg deze toe aan de API-oproep</li>
+    <li>Importeer de Faker-module</li>
+  </ul>
+  <h3>Foutopsporingstaak:</h3>
+  <ul>
+    <li>Gebruik de tab-toets om toegang te krijgen tot de juiste Python-opdrachten</li>
+    <li>Zorg ervoor dat de shebang en Python3 correct zijn geïnstalleerd in elk script</li>
+  </ul>
+  <h3>Verificatietaak:</h3>
+  <ul>
+    <li>Controleer of er 100 boeken aan de API zijn toegevoegd met een succesvolle API-oproep</li>
+    <li>Controleer succesvolle API-oproep met statuscode 200</li>
+    <li>Gebruik de tab-toets om ervoor te zorgen dat de juiste PowerShell-imports worden gebruikt</li>
+  </ul>
     
     
      <!-- <h1>LAB - X - Titel</h1>
