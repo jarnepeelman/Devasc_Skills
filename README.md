@@ -11,17 +11,35 @@
         <li><p>PIP</p></li>
         <li><p>pip install –upgrade pip</p></li>
        </ul>
-      <h5>Visual Studio code<h/5>
+      <h5>Visual Studio code</h5>
         <ul>
+        <li><p>Visual Studio is By Default geïnstalleerd.</p></li>
+        <li><p>In Visual Studio --> Python extensie installeren</p></li>
+        <li><p>Auto-Save aanzetten</p></li>
+        <li><p>Files en folders aanmaken per labo &lt;filename&gt;.py </p></li>
+       </ul>
+      <h5>Jupyter Notebook install commando's:</h5>
+        <ul>
+          <li><p>Sudo apt update & sudo apt upgrade </p></li>
+          <li><p>Sudo apt install python3-pip -&gt; nodig omdat pip zelf eerst geïnstalleerd moet worden vooraleer we pip kunnen gebruiken</p></li>
+          <li><p>Sudo pip3 install jupyter</p></li>
+          <li><p>run het programma: terminal jupyter notebook.</p></li>
+        </ul>
+       <h5>Python IDLE</h5>
+       <ul>
+        <li><p>Sudo apt install idle</p></li>
+        <li><p>Het programma runnen door idle in de terminal te typen.</p></li>
+       </ul>
+    <h3>Task Troubleshooting:</h3>
+    <h4>Een overzicht van de problemen die ik heb ondervonden per programma.</4>
+    <h5>Python 3.8 en PIP</5>
+      <ul>
         <li><p></p></li>
         <li><p></p></li>
         <li><p></p></li>
         <li><p></p></li>
        </ul>
-        
-        
-        
-        
+    
         
         
         
