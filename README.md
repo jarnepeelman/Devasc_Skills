@@ -206,13 +206,46 @@
 <ul>
 <li><p>De <code>append()</code>-methode wordt gebruikt om een element aan het einde van een lijst toe te voegen.</p></li>
 </ul>
+<h3>Task troubleshooting:</h3>
+<ul>
+ <li>Code uitvoeren en kijken welke foutmeldingen we te zien krijgen.</li>
+</ul>
+<h3>Task verification:</h3>
+<ul>
+ <li>Uitvoeren van het script, als de waarden overeenkomen met de gewenste output dan weet je voor elk programma of dit klopt.</li>
+</ul>	
+<h2>PART 2: Explore Python Development Tools</h2>
+<h3>De gedocumenteerde bevindingen:</h3>
+<h4>In deze taks is troubleshooting niet echt mogelijk, daarom een lijst met de doorgelopen stappen belangrijk voor deze opdracht</h4>
+<h5>Nuttige commando's</h5>
+<ul>
+  <li><code>Python3 -V</code> &rarr; Toont welke versie van Python er aanwezig is op het systeem.</li>
+  <li><code>Which python3</code> &rarr; Toont de locatie met het pad naar het uitvoerbare bestand van Python.</li>
+  <li><code>Pip3 freeze</code> &rarr; Dit is een commando dat geïnstalleerde packages uit een virtuele omgeving weergeeft, samen met hun moduleversie.</li>
+  <li><code>Pip3 install requests</code> &rarr; Commando gebruikt om de Python-module "requests" te installeren.</li>
+  <li><code>Python3 -m venv devfun</code> &rarr; Commando dat een Python virtual environment genaamd "devfun" creëert.</li>
+  <li><code>Source devfun/bin/activate</code> &rarr; Commando dat de Python virtual environment activeert en je er naartoe verwijst.</li>
+  <li><code>Deactivate</code> &rarr; Commando dat ons uit de virtuele omgeving haalt en terugkeert naar de terminal.</li>
+  <li><code>Python3 -m pip freeze | grep request</code> &rarr; Toont de geïnstalleerde modules, maar zoekt specifiek naar het woord "request".</li>
+  <li><code>Pip3 freeze > requirements.txt</code> &rarr; Dit commando slaat alle geïnstalleerde pip freeze-modules op in een tekstbestand genaamd "requirements.txt".</li>
+  <li><code>Pip3 install -r requirements.txt</code> &rarr; Commando dat wordt gebruikt in een nieuwe virtuele omgeving om de opgeslagen packages in het bestand "requirements.txt" te installeren.</li>
+</ul>
+	  
+<h2>PART 3: Explore Python Classes</h2>
+<h3>Task implementation en documentation</h3>
+<h4>Belangrijke commando's voor het werken met functies:</h4>
+<h5>Functies in Python</5>
 	  
 	  
-	  
-	  
-	  
-	  
-	  
+
+	
+	
+	
+	
+	
+	
+	
+	
 	  
      <!-- <h1>LAB - X - Titel</h1>
       <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
