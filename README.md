@@ -234,13 +234,33 @@
 <h2>PART 3: Explore Python Classes</h2>
 <h3>Task implementation en documentation</h3>
 <h4>Belangrijke commando's voor het werken met functies:</h4>
-<h5>Functies in Python</5>
-	  
-	  
+<h5>Functies in Python</h5>
+<ul>
+ <li>Functie --> Blok code dat kan worden aangesproken. </li>
+ <li><code>def functie</code> &rarr; Definiëren van een functie.</li>
+ <li><code>functie()</code> &rarr; Aanspreken van de functie</li>
+</ul>
+<h5>Methoden in Python</h5>
+<ul>
+ <li>Elke functie bestaat uit meerdere methoden. Stukjes code die elk op hun beurt een aparte taak uitvoeren.</li>
+</ul>	  
+<h4>Task troubleshooting:</h4>
+<h5>Uitleg:</h5>
+<ul>
+ <li>Om dit onderdeel te troubleshooten kan je de code uitvoeren en kijken of er errors worden meegegeven.</li>
+ <li>Voorkomende error: Vergeten importeren van een module</li>
+</ul>		
+<h4>Task Verification:</h4>
+<h5>Scripts:</h5>
+<ul>
+ <li>De geschreven scripts en output zijn terug te vinden in de mappen. Hierin zal je zien dat de getestte zaken werken.</li>
+</ul>	
 
-	
-	
-	
+<h1>LAB 4 – NETWORK INFRASTRUCTURE AND TROUBLESHOOTING </h1>
+<h2>PART 1: Network Infrastructure</h2>
+<h3>Uitleg over dit labo!</h3>
+<h4>Hieronder vind je de uitleg over onze netwerktekening alsook de geconfigureerde zaken op de netwerk devices</h4>
+<h5>Netwerk tekening</h5>
 	
 	
 	
