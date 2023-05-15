@@ -258,133 +258,169 @@
 
 <h1>LAB 4 – NETWORK INFRASTRUCTURE AND TROUBLESHOOTING </h1>
 <h2>PART 1: Network Infrastructure</h2>
-<h3>Uitleg over dit labo!</h3>
-<h4>Hieronder vind je de uitleg over onze netwerktekening alsook de geconfigureerde zaken op de netwerk devices</h4>
+<h3>Hieronder vind je de uitleg over onze netwerktekening alsook de geconfigureerde zaken op de netwerk devices</h3>
+<h4>Task preparation en implentation:</h4>
 <h5>Netwerk tekening</h5>
 <ul>
  <li>De netwerk tekeningen van onze netwerkconfiguratie is te vinden in de bijhorende map.
  <li>Deze bevat een ip tabel, poortnummers, subnets en area nummer</li>
+</ul>
+<h5>De netwerk configuratie: switch</h5>
 <ul>
-<h5>De netwerk configuratie</h5>
+	<li>Vlan 10 voor management</li>
+	<li>Vlan 40 voor data users</li>
+	<li>Default gateway</li>
+	<li>Management IP</li>
+</ul>
+<h5>De netwerk configuratie: Router</h5>
+<ul>
+	<li>Encapsulatie op g0/0.10 en g0/40</li>
+	<li>OSPF enabled <li>
+	<li>Default gateway ingesteld</li>
+	<li>OSPF 10</li>
+	<li>Router id 7.7.7.7
+	<li>Routes naar andere netwerken</li>
+</ul>	
+<h5>De netwerk configuratie: security features op de switch</h5>
+<ul>
+	<li>Port security</li>
+	<li>BPDU guard</li>
+	<li>Vlans toewijzen op enkel de poorten die nodig zijn</li>
+	<li>Niet gebruikte poorten op shutdown in apparte vlan.</li>
+	<li>SSH enabled</li>
+	<li>Wachtwoorden voor de lines, ssh en enable</li>
+</ul>
+<h5>De netwerk configuratie: security features op de router</h5>	
+<ul>
+	<li>Down zetten van niet gebruikte poorten.</li>
+	<li>SSH enabled</li>
+	<li>Wachtwoorden voor de lines, ssh en enable</li>
+</ul>	
+<h4>Task troubleshooting:</h4>
+<h5>Switch troubleshoot commando's</h5>
+<ul>
+	<li><b>Show interfaces</b>: Geeft informatie over de status van de interfaces op de switch. Hiermee kun je controleren of de interfaces correct zijn geconfigureerd en of er fouten of problemen worden gedetecteerd.</li>
+	<li><b>Show vlan</b>: Toont de VLAN-configuratie op de switch. </li>
+	<li><b>Show spanning-tree</b>: Geeft informatie over het Spanning Tree Protocol (STP) op de switch.</li>
+	<li><b>Show running-config</b>: Geeft de huidige configuratie van de switch weer.</li>
+	<li><b>Show ip ssh</b>: Toont de SSH-configuratie op de switch. Hiermee kun je controleren of SSH is ingeschakeld en of de juiste versie en beveiligingsinstellingen zijn geconfigureerd.</li>
+	<li><b>Show line vty</b>: Geeft de configuratie van de virtuele terminal (VTY) lines weer.</li>
+	<li><b>Show running-config | include enable secret</b>: Toont het configuratiegedeelte met het enable secret-wachtwoord.</li>
+  <li><b>Ping</b>: Hiermee kun je de connectiviteit testen tussen de switch en een specifiek IP-adres. Bijvoorbeeld: <code>ping 192.168.1.1</code></li>
+  <li><b>Traceroute</b>: Hiermee kun je het pad traceren dat een pakket volgt vanaf de switch naar een bepaald IP-adres. </li>
+  <li><b>Show ip route</b>: Toont de IP-routetabel op de switch. </li>
+</ul>
+<h5>Router troubleshoot commando's</h5>
+<ul>
+  <li><b>Show interfaces</b>: Geeft informatie over de status van de interfaces op de router. </li>
+  <li><b>Show ip route</b>: Toont de IP-routetabel op de router.</li>
+  <li><b>Show running-config</b>: Geeft de huidige configuratie van de router weer. </li>
+  <li><b>Show ip ssh</b>: Toont de SSH-configuratie op de router.</li>
+  <li><b>Show running-config | include enable secret</b>: Toont het configuratiegedeelte met het enable secret-wachtwoord. </li>
+  <li><b>Ping</b>: Hiermee kun je de connectiviteit testen tussen de router en een specifiek IP-adres. Bijvoorbeeld: <code>ping 192.168.1.1</code></li>
+  <li><b>Traceroute</b>: Hiermee kun je het pad traceren dat een pakket volgt vanaf de router naar een bepaald IP-adres. Bijvoorbeeld: <code>traceroute 192.168.1.1</code></li>
+  <li><b>Show ip OSPF</b>: Toont de OSPF-configuratie op de router.</li>	
+</ul>
+
+<h1>LAB 5 – Software Development and Design Content</h1>
+<h2>PART 1: Software Version Control with Git</h2>
+  <h3>Task preparation en implementatie:</h3>	
+<h4>Git Commando's:</h4>
+<h5>Basic Commando's:</h5>
+<ul>
+  <li><p><b>Git init:</b> Commando om Git te laten weten in welke directory de huidige directory zich bevindt.</p></li>
+  <li><p><b>Git status:</b> Commando om te controleren of de status van bestanden is gewijzigd.</p></li>
+  <li><p><b>Git add:</b> Hiermee wordt een bestand klaargemaakt om te worden gecommit.</p></li>
+  <li><p><b>Git commit:</b> Hiermee wordt een bestand daadwerkelijk gecommit, met een uniek ID.</p></li>
+  <li><p><b>Git log:</b> Toont de geschiedenis van de commits.</p></li>
+  <li><p><b>Git diff:</b> Toont het verschil tussen twee bestanden met behulp van de gegeven ID's.</p></li>
+</ul>
+<h5>Branches en Merging Commando's:</h5>
+<ul>
+  <li><p><b>Git branch:</b> Maakt een nieuwe branch aan. Er is altijd één master branch.</p></li>
+  <li><p><b>Git checkout:</b> Stelt je in staat om naar de master branch te gaan.</p></li>
+  <li><p><b>Git merge:</b> Voegt de code samen van verschillende branches.</p></li>
+  <li><p><b>Git branch -d:</b> Verwijdert een Git branch.</p></li>
+</ul>
+<h5>Andere Commando's:</h5>
+<ul>
+  <li><p><b>Sed:</b> Commando dat ervoor zorgt dat je een woord kunt vervangen.</p></li>
+  <li><p><b>VIM:</b> Optie 'dd' om regels te verwijderen.</p></li>
+  <li><p><b>Cp:</b> Kopieert een bestand uit de bovenliggende directory.</p></li>
+  <li><p><b>Git remote add:</b> Maakt een alias voor een Git URL.</p></li>
+  <li><p><b>Git push origin master:</b> Commando om een bestand naar de GitHub repository te pushen.</p></li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<ul>
+  <li>
+    <b>"fatal: not a git repository (or any of the parent directories): .git"</b><br>
+    <b>Oplossing:</b> Dit betekent dat je niet in een Git-repository-directory staat. Zorg ervoor dat je je in de juiste map bevindt of initialiseer een nieuwe Git-repository met het commando "git init".
+  </li>
+  <li>
+    <b>"fatal: refusing to merge unrelated histories"</b><br>
+    <b>Oplossing:</b> Deze fout treedt op wanneer je probeert twee niet-gerelateerde Git-repositories samen te voegen. Voeg de optie "--allow-unrelated-histories" toe aan je merge-commando: "git merge --allow-unrelated-histories &lt;branch&gt;".
+  </li>
+  <li>
+    <b>"error: failed to push some refs to &lt;remote&gt;"</b><br>
+    <b>Oplossing:</b> Dit geeft aan dat er problemen zijn bij het pushen naar de externe repository. Zorg ervoor dat je de juiste toegangsrechten hebt en dat de externe repository correct is geconfigureerd. Mogelijk moet je de repository eerst pullen en conflicten oplossen voordat je kunt pushen.
+  </li>
+  <li>
+    <b>"error: Your local changes to the following files would be overwritten by merge"</b><br>
+    <b>Oplossing:</b> Deze foutmelding geeft aan dat er conflicten zijn tussen je lokale wijzigingen en de branch die je wilt mergen. Je kunt de conflicten oplossen door de betreffende bestanden handmatig te bewerken en vervolgens een commit uit te voeren.
+  </li>
+  <li>
+    <b>"error: pathspec '&lt;file&gt;' did not match any file(s) known to git"</b><br>
+    <b>Oplossing:</b> Dit betekent dat het opgegeven bestand niet bekend is in de Git-repository. Controleer of je de juiste bestandsnaam hebt opgegeven en of het bestand daadwerkelijk aanwezig is.
+  </li>
+  <li>
+    <b>"fatal: remote origin already exists."</b><br>
+    <b>Oplossing:</b> Deze fout treedt op wanneer je probeert een externe repository toe te voegen met een naam die al in gebruik is. Je kunt de bestaande configuratie verwijderen en opnieuw toevoegen met het commando "git remote remove origin" en vervolgens "git remote add origin &lt;repository-url&gt;" gebruiken.
+  </li>
+</ul>
+<h3>Task Verification:</h3>
+<h4> Belangrijke troubleshoot commando's</h4>
+<ul>
+  <li>
+    <b>"git config --list"</b><br>
+    Geeft een lijst weer van de Git-configuratie-instellingen op het systeem.
+  </li>
+  <li>
+    <b>"git status"</b><br>
+    Toont de status van het werkende directorygebied, inclusief wijzigingen, toevoegingen en commits.
+  </li>
+  <li>
+    <b>"git log"</b><br>
+    Toont een overzicht van de commit-geschiedenis met informatie zoals auteur, datum en commit-berichten.
+  </li>
+  <li>
+    <b>"git diff"</b><br>
+    Vergelijkt de wijzigingen tussen het werkende directorygebied en de laatste commit.
+  </li>
+  <li>
+    <b>"git branch"</b><br>
+    Toont een lijst van branches in de repository en geeft de huidige branch aan met een asterisk (*).
+  </li>
+  <li>
+    <b>"git remote -v"</b><br>
+    Geeft de URL's weer van de externe repositories die aan de lokale repository zijn gekoppeld.
+  </li>
+</ul>
+<h2>PART 2: Create a Python Unit Test</h2>
+<h3>Task implementation en preparation:<h3>
+<h4>Belangrijke opmerkingen van dit Labo</h4>
+<ul>
+<li>Het plakken van de python code moet gebeuren met dezelde inspiring regels als in de pdf anders gaat dit niet werken.</li>
+<li>Zorg voor duidelijke commentaar regels in de code. </li>
+</ul>
+
+<h2>
+<h3>Task implementation en preparation:<h3>
+<h4>Belangrijke opmerkingen en commando's van dit Labo</h4>
+<ul>
+<li><code>XML</code> &rarr; XML extensible markup language</li>
+<li><code>import re </code> &rarr; importeren van de regular expression engine</li>
+<li><code>Json</code> &rarr; Werkt aan de hand van Access Tokens, zoals github met de Personal access token</li>
+<li><code>import json</code> &rarr; importeren van de json module</li>
+<li><code>import yaml</code> &rarr; importeren van de yaml module.</li>
+</ul>
 	
-	
-	
-	
-	
-	  
-     <!-- <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-        
-        <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-        
-        
-        <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-        
-        <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-        
-        <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-        
-        <h1>LAB - X - Titel</h1>
-      <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
-      <h3>Task preparation en implementatie:</h3> 
-      <h4></h4>
-      <h5></h5>
-       <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul>
-      <h5>Visual Studio code<h/5>
-        <ul>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-        <li><p></p></li>
-       </ul> -->
-  </body>
-</html>
