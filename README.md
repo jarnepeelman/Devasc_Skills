@@ -261,6 +261,11 @@
 <h3>Uitleg over dit labo!</h3>
 <h4>Hieronder vind je de uitleg over onze netwerktekening alsook de geconfigureerde zaken op de netwerk devices</h4>
 <h5>Netwerk tekening</h5>
+<ul>
+ <li>De netwerk tekeningen van onze netwerkconfiguratie is te vinden in de bijhorende map.
+ <li>Deze bevat een ip tabel, poortnummers, subnets en area nummer</li>
+<ul>
+<h5>De netwerk configuratie</h5>
 	
 	
 	
