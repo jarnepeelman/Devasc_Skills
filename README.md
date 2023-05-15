@@ -130,7 +130,7 @@
     <li>Controleer succesvolle API-oproepen met statuscodes 200</li>
     <li>Zorg ervoor dat de juiste items in de respons worden geretourneerd</li>
   </ul>
-  <h2>Deel 3: Gebruik Python om 100 boeken aan de API-simulator toe te voegen</h2>
+  <h2>PART 3: Gebruik Python om 100 boeken aan de API-simulator toe te voegen</h2>
   <h3>Voorbereiding en uitvoering van de taak:</h3> 
   <ul>
     <li>Verkrijg de API-toegangstoken en voeg deze toe aan de API-oproep</li>
@@ -147,8 +147,73 @@
     <li>Controleer succesvolle API-oproep met statuscode 200</li>
     <li>Gebruik de tab-toets om ervoor te zorgen dat de juiste PowerShell-imports worden gebruikt</li>
   </ul>
-    
-    
+ 
+<h1>LAB 3 - PYTHON REVIEW – DEVELOPMENT TOOLS AND CLASSES</h1>
+   <h2>PART 1: Python Programming Review</h2>
+	<h3>Task preparation en implementatie:</h3>
+    <h4>Hieronder is een lijst van algemene commando's alsook commando's die ik heb gebruikt per programma:</h4>
+	  <ul>
+  <li><code>Python3 -V</code> &rarr; Toont welke versie van Python er aanwezig is op het systeem.</li>
+  <li><code>Which python3</code> &rarr; Toont de locatie met het pad naar het uitvoerbare bestand van Python.</li>
+  <li><code>python3</code> &rarr; Aanspreken van de Python interpreter.</li>
+  <li>><code>print("Hello World")</code> &rarr; Tonen van de output Hello World</li>
+  <li>><code>quit()</code> &rarr; Verlaten van de Python interpreter.</li>
+</ul>
+<h5>Visual Studio Code en Python</h5>
+<ol>
+<li>Aanmaken van HelloWorld.py file in Visual Studio</li>
+<li>Run --> run and debug
+</ol>
+<h5>Python Data types</h5>
+<ul>
+ <li><code>type(x)</code> &rarr; Op de plaats van de X kan je nummers, waarden, letters meegeven. Dit commando geeft ons terug welke type variabele dit is.</li>
+ <li><code>print(str1+space+str2+space+str3)</code> &rarr; Samenvoegen van meerdere strings</li>
+<h5>Maken van arrays in Python</h5>
+<ul>
+ <li><code>my_array = [1, 2, 3, 4, 5]</code> &rarr; Dit maakt een array aan.</li>
+</ul>
+<h5>If-else in Python</h5>
+<ul>
+ <li> Waarde controleren --> als dit waar is voer dan dit uit, als dit niet waar is voer dan de else uit. </li>
+</ul>
+<h5>For Loop in Python</h5>
+<p>De <code>for</code>-loop wordt gebruikt om een blok code voor elk element in een reeks uit te voeren.</p>
+<pre><code>for element in reeks:
+    # Code om uit te voeren voor elk element
+    # ...</code></pre>
+
+<h5>While Loop in Python</h5>
+<p>De <code>while</code>-loop wordt gebruikt om een blok code te herhalen zolang een bepaalde voorwaarde waar is.</p>
+<pre><code>while voorwaarde:
+    # Code om uit te voeren zolang de voorwaarde waar is
+    # ...</code></pre>
+
+<h5>Do-While Loop in Python</h5>
+<p>In Python is er geen ingebouwde <code>do-while</code>-loop zoals in sommige andere programmeertalen. Je kunt echter een <code>do-while</code>-achtig gedrag simuleren met een <code>while</code>-loop en een extra controle na de lus.</p>
+<pre><code>while True:
+    # Code om uit te voeren
+    # ...
+
+    # Controleer de voorwaarde voor de do-while-lus
+    if not voorwaarde:
+        break
+</code></pre>
+<h5>strip() in Python</h5>
+<ul>
+<li><p>De <code>strip()</code>-methode wordt gebruikt om leidende en volgende spaties (of andere opgegeven karakters) van een tekenreeks te verwijderen.</p></li>
+</ul>
+<h5>append() in Python</h5>
+<ul>
+<li><p>De <code>append()</code>-methode wordt gebruikt om een element aan het einde van een lijst toe te voegen.</p></li>
+</ul>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
      <!-- <h1>LAB - X - Titel</h1>
       <h2>TASK X: Installatie van de verschillende tools/packages op Ubuntu</h2>
       <h3>Task preparation en implementatie:</h3> 
