@@ -406,7 +406,7 @@
   </li>
 </ul>
 <h2>PART 2: Create a Python Unit Test</h2>
-<h3>Task implementation en preparation:<h3>
+<h3>Task implementation en preparation:</h3>
 <h4>Belangrijke opmerkingen van dit Labo</h4>
 <ul>
 <li>Het plakken van de python code moet gebeuren met dezelde inspiring regels als in de pdf anders gaat dit niet werken.</li>
@@ -424,3 +424,54 @@
 <li><code>import yaml</code> &rarr; importeren van de yaml module.</li>
 </ul>
 	
+<h1>LAB 6 – Python Network automation with netmiko</h1>
+<h2>PART 1: Connecting to a single iOS device</h2>
+<h3>Task implementation en preparation:</h3>
+<h4>Belangrijke opmerkingen bij dit labo</h4>
+<ul>
+<li><code>from netmiko import Connecthandler </code> &rarr; Het importeren van de connecthandler uit de netmiko module.</li>
+<li><code>Cisco_881 = {} </code> &rarr; Hierin de gegevens meegeven voor de router of switch. Het device dat we willen configureren.</li>
+<li><code>ConnectHandler(**cisco_881)</code> &rarr; Aanspreken van de ConnectHandler module</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshootopties</h4>
+<ul>
+<li><code>Traceback (most recent call last):
+  File "script.py", line 7, in module</code> &rarr; Controleren of de module aanwezig is.</li>
+<li><code>ImportError: No module named 'module_name'</code> &rarr; Deze fout treedt op wanneer je probeert een module te importeren die niet kan worden gevonden.</li>
+    <li><code>SyntaxError: invalid syntax</code> &rarr; Deze fout treedt op wanneer de syntaxis van de Python-code ongeldig is.</li>
+    <li><code>AttributeError: 'str' object has no attribute 'some_attribute'</code> &rarr; Deze fout treedt op wanneer je probeert een attribuut te gebruiken dat niet bestaat voor het gegeven object.</li>
+    <li><code>KeyError: 'key_name'</code> &rarr; Deze fout treedt op wanneer je probeert een sleutel te gebruiken die niet aanwezig is in een woordenboek.</li>
+ </ul>
+<h3>Task Verification:</h3>
+<h4>Belangrijkste manieren om te testen of de zaken werken:</h4>
+<ul>
+<li>Voer het script uit en zorg ervoor dat je geen errors krijgt.</li>
+<li><code>Python --version</code> &rarr; Controleer voor alle zekerheid of de juiste Python versie aanwezig is.</li>
+</ul>
+	
+<h2>PART 2: Connect to multiple IOS devices</h2>
+<h3>Task implementation en preparation:</h3>
+<ul>
+<li><code>from netmiko import Connecthandler </code> &rarr; Het importeren van de connecthandler uit de netmiko module.</li>
+<li><code>Cisco_881 = {} </code> &rarr; Hierin de gegevens meegeven voor de router of switch. Het device dat we willen configureren.</li>
+<li>De configuratie van beide devices, wachtwoord en username moet aanwezig zijn.</li>
+<li><code>ConnectHandler(**cisco_881)</code> &rarr; Aanspreken van de ConnectHandler module</li>
+<li>Files voor het opslaan van Output klaarzetten</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshootopties</h4>
+<ul>
+<li>Zorg ervoor dat de juiste wachtwoorden en usernames aanwezig zijn voor de SSH calls.</li>
+<li>Let op de Authentication failed melding bij het verkeerd ingeven van wachtwoord of username</li>
+<li>Geef de correcte IP's mee </li>
+<li>Geef de correcte uitvoerbare commando's mee</li>
+</ul>
+<h3>Task Verification:</h3>
+<h4>Belangrijkste manieren om te testen of de zaken werken:</h4>
+<ul>
+<li>Voer het script uit en zorg ervoor dat je geen errors krijgt.</li>
+<li><code>Python --version</code> &rarr; Controleer voor alle zekerheid of de juiste Python versie aanwezig is.</li>
+<li><code>pip list</code> &rarr; Geeft een lijst van de geïnstalleerde pip modules.
+<li>De scriptjes tonen of alles juist geconfigureerd is. Deze vind je in de LAB folders.</li>
+</ul>
