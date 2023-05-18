@@ -1,0 +1,147 @@
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1838141568
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1838141568
+ revocation-check none
+ rsakeypair TP-self-signed-1838141568
+!
+!
+crypto pki certificate chain TP-self-signed-1838141568
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31383338 31343135 3638301E 170D3933 30333031 30303235
+  31375A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 38333831
+  34313536 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100989A 16DEAE49 68062C4E 9958D260 30CAFCFE C7A8E6EB F1974959 09F5D383
+  4745E205 02AC1B9B 43F12CB2 487AEA55 F4B17D8B 8885ADB6 54B9213D 7566D921
+  63F1F13B 93D40A4C B63CC20A 531C589D EE9F3903 EF7AE694 AF7E75FC 549C3B37
+  A00670C1 A697089B EE5596F1 93B3AFD3 F59DAC89 F4535D5C 05B13ADD 1F702785
+  CD330203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 14733B1E E14B2158 291E81FE 4C5F607D F9FC3404 6B301D06
+  03551D0E 04160414 733B1EE1 4B215829 1E81FE4C 5F607DF9 FC34046B 300D0609
+  2A864886 F70D0101 05050003 81810051 6EA9CDCE 7DDC0636 EEDC53E2 D18F7C9F
+  D94ED19B 30BDD3E6 81E39EBD B1618CB5 76A4AE9B D5EDEC9E A08CE4F9 56375962
+  90C3DC37 81AFC9CD D2321803 0214DABB 2E25D9B6 86714B6E 9790D73A D314D5A9
+  27167149 F6CE65F6 AE6C9CC6 F1E39F2B 73526F5C D32C453A A0EA1E86 75263D24
+  87E1BE95 C3A5224E 9843348F 22605C
+        quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 10,40
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip http server
+ip http secure-server
+!
+!
+line con 0
+line vty 0 4
+ login
+ transport input ssh
+line vty 5 15
+ login
+
+Switch#config
+Switch#configure
+Configuring from terminal, memory, or network [terminal]?
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#ip def
+Switch(config)#interface vlan 10
+Switch(config-if)#
+*Mar  1 00:31:19.761: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+Switch(config-if)#ip add
+Switch(config-if)#ip address 172.16.7.7 255.255.255.240
+Switch(config-if)#no shut
+Switch(config-if)#exit
+Switch(config)#ip def
+Switch(config)#ip default-gateway 172
+% Incomplete command.
+
+Switch(config)#ip default-gateway 172.16.7.4
+Switch(config)#exit
+Switch#show run

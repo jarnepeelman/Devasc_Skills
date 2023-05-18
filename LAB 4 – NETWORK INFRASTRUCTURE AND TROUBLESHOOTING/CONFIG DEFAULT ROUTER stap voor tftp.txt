@@ -1,0 +1,124 @@
+CONFIG DEFAULT ROUTER
+
+NAAR SERVER
+copy running-config tftp:
+10.199.64.134
+
+VAN SERVER
+copy tftp: running-config
+10.199.64.134
+lab-ra07-c-r03-confg
+
+VERWIJDEREN 
+eraste running-config
+delete vlan.dat
+
+
+
+Building configuration...
+
+
+Current configuration : 1195 bytes
+!
+! Last configuration change at 11:01:05 UTC Tue May 2 2023
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+!
+cts logging verbose
+!
+!
+license udi pid CISCO1941/K9 sn FCZ213740CM
+!
+!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 10.199.66.107 255.255.255.224
+ duplex auto
+ speed auto
+ no shutdown
+!
+interface Serial0/1/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/1/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip route 0.0.0.0 0.0.0.0 10.199.66.100
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input none
+!
+scheduler allocate 20000 1000
+!
+end
+
