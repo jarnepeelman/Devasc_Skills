@@ -472,6 +472,36 @@
 <ul>
 <li>Voer het script uit en zorg ervoor dat je geen errors krijgt.</li>
 <li><code>Python --version</code> &rarr; Controleer voor alle zekerheid of de juiste Python versie aanwezig is.</li>
-<li><code>pip list</code> &rarr; Geeft een lijst van de geïnstalleerde pip modules.
+<li><code>pip list</code> &rarr; Geeft een lijst van de geïnstalleerde pip modules. </li>
 <li>De scriptjes tonen of alles juist geconfigureerd is. Deze vind je in de LAB folders.</li>
+</ul>
+
+<h1>LAB 7 - NETCONFIG and YANG</h1>
+<h2>PART 1: Install the CSR1000v VM</h2>
+<h3>Task implementation en preparation</h3>
+<ul>
+<li>Downloaden van de VM ova file </li>
+<li>Downloaden van de ISO file</li>
+<li>Zorgen voor de juiste toetsenbord instellingen</li>
+<li>Toewijzen van Ip address</li>
+<li>Host-Only adapter wijzigen op VM ware.</li>
+</ul>
+<h4>Commando's:</h4>
+<ul>
+<li><code>Show ip interface brief</code>  &rarr; Verschillende interfaces tonen.</li>
+<li>code>ssh cisco@192.168.56.101</code> &arr; Maken van de SSH connectie met de machine</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshoot opmerkingen</h4>
+<ul>
+<li>Check de instellingen van de Virtual box</li>
+<li>Toch overschakelen naar VM ware omwille van Ip toewijzing interface probleem.</li>
+<li>Zorgen dat VMware/VirtualBox up to date is </li>
+</ul>
+<h3>Task Verification:</h3>
+<h4>Checken of alles werkt:</h4>
+<ul>
+<li>Machine opstarten en kijken of de installatie erdoor komt</li>
+<li>Screenshot SSH toont de oplossing</li>
+<li>Web ui: surfen naar https://192.168.40.128. Zie screenshot</li>
 </ul>
