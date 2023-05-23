@@ -536,17 +536,14 @@
 <li><code>SSH</code> &arr; Verbinding maken vanop afstand</li>
 <li><code>Ping</code> &arr; Connectiviteit checken</li>
 <li><code>ssh cisco@10.176.176.209 -p 830 -s netconf</code> &arr; Connectie maken met yang via sshop poort 830</li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
+<li><code>Print()</code> &arr; Gebruikt om een printstatement toe te voegen</li>
+<li><code>For</code> &arr; Maken van een lus om code meermaals uit te voeren.</li>
 </ul>
 <h3>Task Troubleshooting:</h3>
 <h4>Nodige commando's</h4>
 <ul>
 <li><code>netconf-yang</code> &arr; Commando uitvoeren in config terminal als netconfig van yang niet geïnstalleerd zou zijn. </li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
+<li>Lezen van de python errors &arr; Deze zijn eerder al besproken.</li>
 </ul>
 <h3>Task verification:</h3>
 <h4>Nodige commando's</h4>
@@ -555,8 +552,9 @@
 <li><code>ssh cisco@10.176.176.209</code> &arr; Checken of ssh naar het IOS XE device werktt</li>
 <li><code>show platform software yang-management process</code> &arr; Checken van de aanwezige yang management processen.</li>
 <li><code>show netconf-yang sessions</code> &arr; Tonen van de netconfig yang sessions</li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
-<li><code></code> &arr; </li>
+<li><code>pip3 list --format=columns | more</code> &arr; Verifiëren of de ncclient geïnstalleerd is</li>
+<li><code>for - print</code> &arr; Checken of de lus weldegelijk het gevraagd aantal keer wordt uitgevoerd.</li>
+<li><code> python3 ncclient-netconf.py</code> &arr; Uitvoeren en checken of de gewenste output getoond wordt.</li>
+<li>Checken of het script de loopback interface heeft aangemaakt.</li>
+<li><code>show ip int brief</code> &arr; Uitvoeren en checken of de loopback er is bijgekomen.</li>
 </ul>
