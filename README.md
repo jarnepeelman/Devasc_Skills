@@ -505,3 +505,26 @@
 <li>Screenshot SSH toont de oplossing</li>
 <li>Web ui: surfen naar https://192.168.40.128. Zie screenshot</li>
 </ul>
+
+<h2>Part 2: Explore YANG Models</h2>
+<h3>Task preparation en implementation</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>wget</code> &arr; Tool voor het downloaden van bestanden.</li>
+<li><code>pip3 install pyang --upgrade</code> &arr; Upgraden van Pyang naar de laatste nieuwe versie</li>
+<li><code>pyang -h | more</code> &arr; Meerdere opties van het Yang model tonen.</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<ul>
+<li><code>pyang -v</code> &arr; Checken van de juiste versie van Yang.</li>
+<li>De nodige python installaties doen indien deze nog niet waren geinstalleerd.</li>
+<li><code>pyang -f tree <yang_file></code> &arr; Toont een boomstructuurweergave van het YANG-model in het opgegeven <code><yang_file></code>.</li>
+</ul>	
+<h3>Task verification:</h3>
+<ul>
+<li><code>pyang -v</code>: Controleer de juiste versie van Yang.</li>
+<li><code>pyang -f tree <yang_file></code> &arr; Toont een boomstructuurweergave van het YANG-model.</li>
+<li><code>pyang -f yin <yang_file></code> &arr; Converteert het YANG-model naar het YIN-formaat.</li>
+<li><code>pyang -f yang <yin_file></code> &arr; Converteert het YIN-model terug naar het YANG-formaat.</li>
+<li><code>pyang -f jsonx <yang_file></code> &arr; Converteert het YANG-model naar het JSONX-formaat.</li>
+</ul>
