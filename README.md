@@ -406,7 +406,7 @@
   </li>
 </ul>
 <h2>PART 2: Create a Python Unit Test</h2>
-<h3>Task implementation en preparation:<h3>
+<h3>Task implementation en preparation:</h3>
 <h4>Belangrijke opmerkingen van dit Labo</h4>
 <ul>
 <li>Het plakken van de python code moet gebeuren met dezelde inspiring regels als in de pdf anders gaat dit niet werken.</li>
@@ -424,3 +424,137 @@
 <li><code>import yaml</code> &rarr; importeren van de yaml module.</li>
 </ul>
 	
+<h1>LAB 6 – Python Network automation with netmiko</h1>
+<h2>PART 1: Connecting to a single iOS device</h2>
+<h3>Task implementation en preparation:</h3>
+<h4>Belangrijke opmerkingen bij dit labo</h4>
+<ul>
+<li><code>from netmiko import Connecthandler </code> &rarr; Het importeren van de connecthandler uit de netmiko module.</li>
+<li><code>Cisco_881 = {} </code> &rarr; Hierin de gegevens meegeven voor de router of switch. Het device dat we willen configureren.</li>
+<li><code>ConnectHandler(**cisco_881)</code> &rarr; Aanspreken van de ConnectHandler module</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshootopties</h4>
+<ul>
+<li><code>Traceback (most recent call last):
+  File "script.py", line 7, in module</code> &rarr; Controleren of de module aanwezig is.</li>
+<li><code>ImportError: No module named 'module_name'</code> &rarr; Deze fout treedt op wanneer je probeert een module te importeren die niet kan worden gevonden.</li>
+    <li><code>SyntaxError: invalid syntax</code> &rarr; Deze fout treedt op wanneer de syntaxis van de Python-code ongeldig is.</li>
+    <li><code>AttributeError: 'str' object has no attribute 'some_attribute'</code> &rarr; Deze fout treedt op wanneer je probeert een attribuut te gebruiken dat niet bestaat voor het gegeven object.</li>
+    <li><code>KeyError: 'key_name'</code> &rarr; Deze fout treedt op wanneer je probeert een sleutel te gebruiken die niet aanwezig is in een woordenboek.</li>
+ </ul>
+<h3>Task Verification:</h3>
+<h4>Belangrijkste manieren om te testen of de zaken werken:</h4>
+<ul>
+<li>Voer het script uit en zorg ervoor dat je geen errors krijgt.</li>
+<li><code>Python --version</code> &rarr; Controleer voor alle zekerheid of de juiste Python versie aanwezig is.</li>
+</ul>
+	
+<h2>PART 2: Connect to multiple IOS devices</h2>
+<h3>Task implementation en preparation:</h3>
+<ul>
+<li><code>from netmiko import Connecthandler </code> &rarr; Het importeren van de connecthandler uit de netmiko module.</li>
+<li><code>Cisco_881 = {} </code> &rarr; Hierin de gegevens meegeven voor de router of switch. Het device dat we willen configureren.</li>
+<li>De configuratie van beide devices, wachtwoord en username moet aanwezig zijn.</li>
+<li><code>ConnectHandler(**cisco_881)</code> &rarr; Aanspreken van de ConnectHandler module</li>
+<li>Files voor het opslaan van Output klaarzetten</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshootopties</h4>
+<ul>
+<li>Zorg ervoor dat de juiste wachtwoorden en usernames aanwezig zijn voor de SSH calls.</li>
+<li>Let op de Authentication failed melding bij het verkeerd ingeven van wachtwoord of username</li>
+<li>Geef de correcte IP's mee </li>
+<li>Geef de correcte uitvoerbare commando's mee</li>
+</ul>
+<h3>Task Verification:</h3>
+<h4>Belangrijkste manieren om te testen of de zaken werken:</h4>
+<ul>
+<li>Voer het script uit en zorg ervoor dat je geen errors krijgt.</li>
+<li><code>Python --version</code> &rarr; Controleer voor alle zekerheid of de juiste Python versie aanwezig is.</li>
+<li><code>pip list</code> &rarr; Geeft een lijst van de geïnstalleerde pip modules. </li>
+<li>De scriptjes tonen of alles juist geconfigureerd is. Deze vind je in de LAB folders.</li>
+</ul>
+
+<h1>LAB 7 - NETCONFIG and YANG</h1>
+<h2>PART 1: Install the CSR1000v VM</h2>
+<h3>Task implementation en preparation</h3>
+<ul>
+<li>Downloaden van de VM ova file </li>
+<li>Downloaden van de ISO file</li>
+<li>Zorgen voor de juiste toetsenbord instellingen</li>
+<li>Toewijzen van Ip address</li>
+<li>Host-Only adapter wijzigen op VM ware.</li>
+</ul>
+<h4>Commando's:</h4>
+<ul>
+<li><code>Show ip interface brief</code>  &rarr; Verschillende interfaces tonen.</li>
+<li>code>ssh cisco@192.168.56.101</code> &arr; Maken van de SSH connectie met de machine</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<h4>Belangrijkste troubleshoot opmerkingen</h4>
+<ul>
+<li>Check de instellingen van de Virtual box</li>
+<li>Toch overschakelen naar VM ware omwille van Ip toewijzing interface probleem.</li>
+<li>Zorgen dat VMware/VirtualBox up to date is </li>
+</ul>
+<h3>Task Verification:</h3>
+<h4>Checken of alles werkt:</h4>
+<ul>
+<li>Machine opstarten en kijken of de installatie erdoor komt</li>
+<li>Screenshot SSH toont de oplossing</li>
+<li>Web ui: surfen naar https://192.168.40.128. Zie screenshot</li>
+</ul>
+
+<h2>Part 2: Explore YANG Models</h2>
+<h3>Task preparation en implementation</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>wget</code> &arr; Tool voor het downloaden van bestanden.</li>
+<li><code>pip3 install pyang --upgrade</code> &arr; Upgraden van Pyang naar de laatste nieuwe versie</li>
+<li><code>pyang -h | more</code> &arr; Meerdere opties van het Yang model tonen.</li>
+</ul>
+<h3>Task troubleshooting:</h3>
+<ul>
+<li><code>pyang -v</code> &arr; Checken van de juiste versie van Yang.</li>
+<li>De nodige python installaties doen indien deze nog niet waren geinstalleerd.</li>
+<li><code>pyang -f tree <yang_file></code> &arr; Toont een boomstructuurweergave van het YANG-model in het opgegeven <code><yang_file></code>.</li>
+</ul>	
+<h3>Task verification:</h3>
+<ul>
+<li><code>pyang -v</code>: Controleer de juiste versie van Yang.</li>
+<li><code>pyang -f tree yang_file</code> &arr; Toont een boomstructuurweergave van het YANG-model.</li>
+<li><code>pyang -f yin yang_file</code> &arr; Converteert het YANG-model naar het YIN-formaat.</li>
+<li><code>pyang -f yang yin_file</code> &arr; Converteert het YIN-model terug naar het YANG-formaat.</li>
+<li><code>pyang -f jsonx yang_file</code> &arr; Converteert het YANG-model naar het JSONX-formaat.</li>
+</ul>
+
+<h2>Part 3: Use NETCONF to Access an IOS XE Device</h2>
+<h3>Task preparation en implementation</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>SSH</code> &arr; Verbinding maken vanop afstand</li>
+<li><code>Ping</code> &arr; Connectiviteit checken</li>
+<li><code>ssh cisco@10.176.176.209 -p 830 -s netconf</code> &arr; Connectie maken met yang via sshop poort 830</li>
+<li><code>Print()</code> &arr; Gebruikt om een printstatement toe te voegen</li>
+<li><code>For</code> &arr; Maken van een lus om code meermaals uit te voeren.</li>
+</ul>
+<h3>Task Troubleshooting:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>netconf-yang</code> &arr; Commando uitvoeren in config terminal als netconfig van yang niet geïnstalleerd zou zijn. </li>
+<li>Lezen van de python errors &arr; Deze zijn eerder al besproken.</li>
+</ul>
+<h3>Task verification:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>ping -c 5 10.176.176.209</code> &arr; Check de connectiviteit naar het IOS XE device</li>
+<li><code>ssh cisco@10.176.176.209</code> &arr; Checken of ssh naar het IOS XE device werktt</li>
+<li><code>show platform software yang-management process</code> &arr; Checken van de aanwezige yang management processen.</li>
+<li><code>show netconf-yang sessions</code> &arr; Tonen van de netconfig yang sessions</li>
+<li><code>pip3 list --format=columns | more</code> &arr; Verifiëren of de ncclient geïnstalleerd is</li>
+<li><code>for - print</code> &arr; Checken of de lus weldegelijk het gevraagd aantal keer wordt uitgevoerd.</li>
+<li><code> python3 ncclient-netconf.py</code> &arr; Uitvoeren en checken of de gewenste output getoond wordt.</li>
+<li>Checken of het script de loopback interface heeft aangemaakt.</li>
+<li><code>show ip int brief</code> &arr; Uitvoeren en checken of de loopback er is bijgekomen.</li>
+</ul>
