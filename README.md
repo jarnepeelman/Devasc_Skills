@@ -523,8 +523,40 @@
 <h3>Task verification:</h3>
 <ul>
 <li><code>pyang -v</code>: Controleer de juiste versie van Yang.</li>
-<li><code>pyang -f tree <yang_file></code> &arr; Toont een boomstructuurweergave van het YANG-model.</li>
-<li><code>pyang -f yin <yang_file></code> &arr; Converteert het YANG-model naar het YIN-formaat.</li>
-<li><code>pyang -f yang <yin_file></code> &arr; Converteert het YIN-model terug naar het YANG-formaat.</li>
-<li><code>pyang -f jsonx <yang_file></code> &arr; Converteert het YANG-model naar het JSONX-formaat.</li>
+<li><code>pyang -f tree yang_file</code> &arr; Toont een boomstructuurweergave van het YANG-model.</li>
+<li><code>pyang -f yin yang_file</code> &arr; Converteert het YANG-model naar het YIN-formaat.</li>
+<li><code>pyang -f yang yin_file</code> &arr; Converteert het YIN-model terug naar het YANG-formaat.</li>
+<li><code>pyang -f jsonx yang_file</code> &arr; Converteert het YANG-model naar het JSONX-formaat.</li>
+</ul>
+
+<h2>Part 3: Use NETCONF to Access an IOS XE Device</h2>
+<h3>Task preparation en implementation</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>SSH</code> &arr; Verbinding maken vanop afstand</li>
+<li><code>Ping</code> &arr; Connectiviteit checken</li>
+<li><code>ssh cisco@10.176.176.209 -p 830 -s netconf</code> &arr; Connectie maken met yang via sshop poort 830</li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+</ul>
+<h3>Task Troubleshooting:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>netconf-yang</code> &arr; Commando uitvoeren in config terminal als netconfig van yang niet geïnstalleerd zou zijn. </li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+</ul>
+<h3>Task verification:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>ping -c 5 10.176.176.209</code> &arr; Check de connectiviteit naar het IOS XE device</li>
+<li><code>ssh cisco@10.176.176.209</code> &arr; Checken of ssh naar het IOS XE device werktt</li>
+<li><code>show platform software yang-management process</code> &arr; Checken van de aanwezige yang management processen.</li>
+<li><code>show netconf-yang sessions</code> &arr; Tonen van de netconfig yang sessions</li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
+<li><code></code> &arr; </li>
 </ul>
