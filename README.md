@@ -558,3 +558,43 @@
 <li>Checken of het script de loopback interface heeft aangemaakt.</li>
 <li><code>show ip int brief</code> &arr; Uitvoeren en checken of de loopback er is bijgekomen.</li>
 </ul>
+
+<h2>Part 4: Use RESTCONF to Access an IOS XE Device</h2>
+<h3>Task preparation en implementation</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>ping -c 5 192.168.56.102</code> &arr; Checken of er nog connectiviteit is naar ons device.</li>
+<li><code>ssh cisco@192.168.56.101</code> &arr; Verifiëren van de SSH connectie.</li>
+<li><code>config t</code> &arr; Naar de configuration terminal.</li>
+<li><code>restconf</code> &arr; Checken of de restconf deamons runnende zijn.</li>
+<li><code>show platform software yang-management process</code> &arr; Tonen van de Yang processen</li>
+<li><code>ip http secure-server</code> &arr; Commando om http te enablen</li>
+<li><code>ip http authentication local</code> &arr; Commando om lokale authorisatie te kunnen gebruiken</li>
+<li>Basic Authentication &arr; Postman setting om basis authenticatie te gebruiken</li>
+<li>Header &arr; content-type toevoegen. &arr; application/yang-data+json &arr; Dit zegt postman om json te gebruiken.</li>
+</ul>
+
+<h3>Task Troubleshooting:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>restconf</code> &arr; Dit kan helpen om te vergelijken met bepaalde deamons die niet aan staan.</li>
+<li><code>show platform software yang-management process</code> &arr; Tonen van de Yang processen bij eventuele problemen.</li>
+<li><code>show ip int brief</code> &arr; Check de ip's op bepaalde interfaces</li>
+<li>Gebruik visual studio om code op de juiste lijn te kunnen krijgen.</li>
+<li>Status code 400 &arr; Bad Request: Deze statuscode geeft aan dat de server het verzoek van de client niet begrijpt of niet kan verwerken vanwege een slecht geformuleerd verzoek.</li>
+<li>Status code 401 &arr; Unauthorized: Deze statuscode geeft aan dat de client niet geautoriseerd is om toegang te krijgen tot de gevraagde bron.</li>
+<li>Status code 403 &arr; Forbidden: Deze statuscode geeft aan dat de server het verzoek begrijpt maar weigert deze.</li>
+<li>Status code 404 &arr; Not Found: Deze statuscode geeft aan dat de server de gevraagde bron niet kan vinden. Het wordt vaak gebruikt om aan te geven dat de opgegeven URL niet overeenkomt met een geldige bron op de server.</li>
+<li>Status code 500 &arr; Internal Server Error: Deze statuscode geeft aan dat er een onverwachte fout is opgetreden aan de kant van de server. </li>
+<li>Status code 503 &arr; Service Unavailable: Deze statuscode geeft aan dat de server tijdelijk niet beschikbaar is om het verzoek te verwerken. </li>
+</ul>
+	
+<h3>Task verification:</h3>
+<h4>Nodige commando's</h4>
+<ul>
+<li><code>ping -c 5 192.168.56.102</code> &arr; Checken of er nog connectiviteit is naar ons device.</li>
+<li><code>ssh cisco@192.168.56.101</code> &arr; Verifiëren van de SSH connectie.</li>
+<li><code>restconf</code> &arr; Zijn de restconf aan het runnen?</li>
+<li>Status code 400 &arr; Error meldingen zitten in de 400 of 500 bij servers</li>
+<li>Status code 200 &arr; De api call heeft succesvol gewerkt.</li>
+</ul>
