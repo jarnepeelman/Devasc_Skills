@@ -1,6 +1,6 @@
 <html>
   <body>
-    <h1>LAB - 1 - Python Expirements</h1>
+    <h1>Peelman Jarne - LAB - 1 - Python Expirements</h1>
       <h2>TASK 1.1: Installatie van de verschillende tools/packages op Ubuntu</h2>
       <h3>Task preparation en implementatie:</h3> 
     <h4>Hieronder is een lijst van algemene commando's alsook commando's die ik heb gebruikt per programma:</h4>
